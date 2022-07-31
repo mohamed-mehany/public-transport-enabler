@@ -47,6 +47,19 @@ compileTestJava {
     options.encoding = 'UTF-8'
 }
 
+java {
+	withSourcesJar()
+	withJavadocJar()
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+		from components.java
+        }
+    }
+}
+
 test {
     exclude 'de/schildbach/pte/live/**'
 }
