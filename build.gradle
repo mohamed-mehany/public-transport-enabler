@@ -1,6 +1,5 @@
 plugins {
-    id 'java-library'
-    id 'maven'
+    id 'java'
 }
 
 group = 'de.schildbach.pte'
@@ -21,7 +20,7 @@ dependencies {
     implementation 'org.json:json:20090211' // provided by Android
     implementation 'net.sf.kxml:kxml2:2.3.0' // provided by Android
     testImplementation 'junit:junit:4.13.2'
-    testRuntime 'org.slf4j:slf4j-jdk14:1.7.36'
+    //testRuntime 'org.slf4j:slf4j-jdk14:1.7.36'
 }
 
 sourceSets {
@@ -52,13 +51,13 @@ java {
 	withJavadocJar()
 }
 
-publishing {
+/*publishing {
     publications {
         maven(MavenPublication) {
 		from components.java
         }
     }
-}
+}*/
 
 test {
     exclude 'de/schildbach/pte/live/**'
