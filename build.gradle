@@ -52,13 +52,13 @@ java {
 	withJavadocJar()
 }
 
-/*publishing {
+publishing {
     publications {
         maven(MavenPublication) {
 		from components.java
         }
     }
-}*/
+}
 
 test {
     exclude 'de/schildbach/pte/live/**'
